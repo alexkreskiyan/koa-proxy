@@ -30,6 +30,9 @@ module.exports = function(options) {
     var parsedBody = getParsedBody(this);
 
     var opt = {
+      agentOptions: {
+        rejectUnauthorized: false
+      },
       url: url + (this.querystring ? '?' + this.querystring : ''),
       headers: this.header,
       encoding: null,
